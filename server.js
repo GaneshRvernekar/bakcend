@@ -42,18 +42,18 @@ const onError = error =>{
 
 const onListening =()=>{
   const addr= server.address();
-  const bind = typeof addr === "string" ? "pipe"+addr: "port"+PORT;
+  const bind = typeof addr === "string" ? "pipe"+addr: "port"+port;
   debug("Listening on"+bind);
 }
 
-const PORT =process.env.port || 3000;
+const port =process.env.port || 3000;
 
-app.set('port',PORT);
+app.set('port',port);
 
 const server= http.createServer(app);
 server.on("error",onError);
 server.on("listening",onListening);
 // server.listen(3000);
-server.listen(PORT, ()=>{
-  console.log('Listening on port ${PORT}')
+server.listen(port, ()=>{
+  console.log('Listening on port ${port}')
 })
