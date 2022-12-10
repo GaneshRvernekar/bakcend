@@ -22,12 +22,13 @@ const storage = multer.diskStorage({
     {
       error=null;
     }
-    cb(error,"backend/images");
+    cb(error,"images");
   },
   filename:(req,file,cb)=>{
     const name = file.originalname.toLowerCase().split(' ').join('-');
-     const ext = MIME_TYPE_MAP[file.mimetype];
-     cb(null,name+'-'+Date.now()+'.'+ext);
+   
+    const ext = MIME_TYPE_MAP[file.mimetype];
+    cb(null, Date.now()+'.'+ext);
   }
 });
 
@@ -136,7 +137,6 @@ router.get("",(req,res,next)=>{
     return Talent.count();
   })
   .then(count=>{
-
     res.status(200).json({
       message:"posts fetched successfully",
       talents:fetchedDoc,

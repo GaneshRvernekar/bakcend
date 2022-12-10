@@ -33,8 +33,8 @@ mongoose.connect("mongodb+srv://ganesh:Ganesh2003@myfirstprojects.nejygcx.mongod
 
 app.use(bodyParser.json()); //it will parse the incoming data
 app.use(bodyParser.urlencoded({extended:false}));
-
-app.use("/images",express.static(path.join("backend/images")));
+app.use(express.static('public'));
+app.use("/images",express.static(path.join("images")));
 
 
 app.use((req,res,next)=>{
