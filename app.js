@@ -31,6 +31,8 @@ mongoose.connect("mongodb+srv://ganesh:Ganesh2003@myfirstprojects.nejygcx.mongod
   console.log("connection is failed .");
 })
 
+response.headers.add('Access-Control-Allow-Origin', 'https://insights-ngy8.onrender.com/')
+
 app.use(bodyParser.json()); //it will parse the incoming data
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
