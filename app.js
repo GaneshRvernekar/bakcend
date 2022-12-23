@@ -18,7 +18,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:8080",
-      "https://spontaneous-swan-32e0c4.netlify.app/",
+      "https://spontaneous-swan-32e0c4.netlify.app",
     ],
   })
 ); 
