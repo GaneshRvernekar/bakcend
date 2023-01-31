@@ -20,7 +20,10 @@ app.use(
       "http://localhost:8080",
       "https://spontaneous-swan-32e0c4.netlify.app",
       "https://kletechinsights.netlify.app",
-      "https://front-end-lyart-theta.vercel.app"
+      "https://front-end-lyart-theta.vercel.app",
+      "https://insightsofkletech.vercel.app",
+      "https://bvbinsights.vercel.app",
+      "https://insightsofkletech2.vercel.app",
     ],
   })
 ); 
